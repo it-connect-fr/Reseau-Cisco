@@ -1,0 +1,14 @@
+enable 
+configure terminal
+hostname SW2
+enable secret adminpa55
+line console 0 
+password linepa55
+login
+line vty 0 15
+password linepa55
+login
+service password-encryption
+banner motd "Acces reserve au seul personnel autorise"
+end
+write
