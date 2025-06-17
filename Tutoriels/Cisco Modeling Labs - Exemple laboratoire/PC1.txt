@@ -1,0 +1,9 @@
+# this is a shell script which will be sourced at boot
+hostname PC01
+# configurable user account
+USERNAME=itconnect1
+PASSWORD=itconnect1
+ip address add 192.168.10.1/24 dev eth0
+ip link set dev eth0 up
+ip route add 192.168.10.0/24 dev eth0
+ip route add default via 192.168.10.254
